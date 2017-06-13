@@ -1,0 +1,155 @@
+/* font */
+@font-face {
+  font-family: 'honoka';
+  src: url(../font/honokamin.ttf);
+}
+
+@font-face {
+  font-family: 'Haettenschweiler';
+  src: url(../font/Haettenschweiler.ttf);
+}
+
+body {
+  font-family: 'honoka', "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+  color: #082936;
+}
+
+.text-english {
+  font-family: 'Haettenschweiler', 'Avenir', 'Helvetica Neue', 'Helvetica',' Arial';
+}
+
+
+/* document color */
+
+.text-black {
+  color: #082936;
+}
+
+.text-gray {
+  color: #6F6E6F; 
+}
+
+.text-lightgray {
+  color: #C1C2C2;
+}
+
+.text-orange {
+  color: #f0831e;
+}
+
+.text-white {
+  color: #fff;
+}
+
+
+/* bg-color */
+
+.bg-black {
+  background-color: #082936;
+}
+
+.bg-gray {
+  background-color: #6F6E6F; 
+}
+
+.bg-lightgray {
+  background-color: #C1C2C2;
+}
+
+.bg-orange {
+  background-color: #f0831e;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+
+
+/* font-size */
+.font-xxsmall {
+  font-size: 8px;
+}
+
+.font-xsmall {
+  font-size: 10px;
+}
+
+.font-small {
+  font-size: 12px;
+}
+
+.font-middle {
+  font-size: 16px;
+}
+
+.font-large {
+  font-size: 20px;
+}
+
+.font-xlarge {
+  font-size: 24px;
+}
+
+.font-xxlarge {
+  font-size: 28px;
+}
+
+.font-xxlarge {
+  font-size: 32px;
+}
+
+
+/* float */
+
+.l-left {
+  float: left;
+}
+
+.l-right {
+  float: right;
+}
+
+
+
+/* relative */
+
+.l-relative {
+  position: relative;
+}
+
+
+
+/* 中央寄せ */
+
+.flexbox{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap; /* Safari */
+  flex-wrap: wrap;
+}
+
+.center {
+  -webkit-justify-content: center; /* Safari */
+  justify-content: center;
+}
+
+.sp-between {
+  -webkit-justify-content: space-between; /* Safari */
+  justify-content: space-between;
+}
+
+.x-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.y-center {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
