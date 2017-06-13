@@ -6,7 +6,7 @@
   <title>芸工祭 2017</title>
   <link rel="stylesheet" type="text/css" href="../css/normalize.css">
   <link rel="stylesheet" type="text/css" href="../css/default.css">
-  
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
   <!--  -->
   <link rel="stylesheet" type="text/css" href="../css/jquery.multiscroll.css" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -24,44 +24,41 @@
 <div id="myContainer">
 
   <div class="ms-left">
-    <div class="ms-section bg-orange" id="left1">
-      <h1>Left 1</h1>
+    <div class="ms-section l-relative" id="left1">
+      <img class='logo-img y-center' src='../img/logo-img.png'>
     </div>
-
-    <div class="ms-section" id="left2">
+    <div class="ms-section bg-orange" id="left2">
       <h1>Left 2 </h1>
     </div>
-
-    <div class="ms-section bg-orange" id="left3">
+    <div class="ms-section" id="left3">
       <h1>Left 3</h1>
     </div>
   </div>
 
   <div class="ms-right">
     <div class="ms-section" id="right1">
-      <h1>Right 1</h1>
     </div>
 
     <div class="ms-section bg-black" id="right2">
       <h1 class='text-white'>Right 2</h1>
     </div>
 
-    <div class="ms-section" id="right3">
+    <div class="ms-section bg-orange" id="right3">
       <h1>Right 3</h1>
     </div>
   </div>
 </div>
   <script type="text/javascript">
-   $(document).ready(function() {
-            $('#myContainer').multiscroll({
-              anchors: ['first', 'second', 'third'],
-              menu: '#menu',
-              navigation: true,
-              navigationTooltips: ['One', 'Two', 'Three'],
-              loopBottom: false,
-              loopTop: false
-            });
-        });
+    $(document).ready(function(){
+      $('#myContainer').multiscroll({
+        anchors: ['first', 'second', 'third'],
+        menu: '#menu',
+        navigation: true,
+        navigationTooltips: ['One', 'Two', 'Three'],
+        loopBottom: false,
+        loopTop: false
+      });
+    });
     </script>
 </body>
 </html>
