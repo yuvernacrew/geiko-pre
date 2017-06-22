@@ -1,6 +1,158 @@
-.logo-img {
-  position: absolute;
-  width: 90vw;
-  left: 5vw;
+/*loading*/
+
+#loading {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 1000;
+}
+#loading-contents {
+  display: block;
+  position: fixed;
+  left: -43.4%;
+  top: 11.4%;
+  width: 184%;
+  text-align: center;
+  color: #fff;
+  z-index: 1001;
 }
 
+#loading-contents img {
+  width: 100%;
+}
+
+.logo-img {
+  position: absolute;
+  width: 100vw;
+}
+
+
+@media(max-width: 540px){
+  .h2-img img{
+    width: 60%;
+    margin: 5% 0 0 5%;
+  }
+
+  /*--------------
+    loading
+  ---------------*/
+
+  .down-btn {
+    width: 20vw;
+    left: -10vw;
+    bottom: 3%;
+    position: absolute;
+  }
+  /*--------------
+    about
+  ---------------*/
+  .article-container {
+    position: absolute;
+    width: 90vw;
+    left: 5vw;
+    height: 80vw;
+    z-index: 100;
+  }
+
+  .article-about img{
+    position: static;
+    height: 6vh;
+  }
+
+  .article-about p {
+    padding: 0;
+    font-size: 12px;
+    margin: 0 0 18px 0;
+  }
+
+  /*--------------
+    movie
+  ---------------*/
+  .play-tape {
+    position: absolute;
+    width: 100vw;
+    background-color: black;
+    background-image: url('../img/movie-tape.png');
+    background-size: contain;
+    height: 4vh;
+    z-index: 100;
+  }
+
+  .movie-container {
+    position: absolute;
+    background-color: black;
+    top: 25vh;
+    left: 0vw;
+    width: 100vw;
+    height: 40vh;
+    z-index: 100;
+  }
+
+  .movie-container iframe {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+  }
+
+  .tape-top {
+    top: 24vh;
+    z-index: 400;
+  }
+
+  .tape-bottom {
+    z-index: 400;
+    top: 67vh;
+    background-position: center;
+  }
+
+  .img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/mv-black.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .img-container img{
+    width: 70vw;
+    margin-left: 15vw;
+    margin-top: 46vh;
+  }
+
+  /*--------------
+    job
+  ---------------*/
+  .text-container {
+    position: absolute;
+    background-image: url('../img/popcorn-black-img.png');
+    background-size: cover;
+    top: 38vh;
+    left: -20vw;
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .text-container div {
+    position: relative;
+    width: 56%;
+    height: 80%;
+    margin: 0 auto;
+  }
+
+  .text-container p {
+    font-size: 14px;
+    padding: 0;
+    position: absolute;
+    color: white;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,70 @@
+.contain1{
+	position: absolute;
+	left: 5vw;
+	top: 16vh !important;
+	width: 90vw; /*サムネイル全体の幅*/
+	height:  30vh;
+	margin: auto;
+	z-index: 100;
+}
+.slider-nav{
+	height: 100%;
+	margin: auto;
+}
+.slider-nav .a{
+	height: 100%;
+	/*width: 300px;*/
+}
+.a img{
+	height: 15vh;
+	margin: auto;
+}
+.slider-nav .draggable{
+    height: 30vh;
+}
+.slider-nav .slick-current img{/*中央の画像について*/
+    /*transform: scale(1.50);*/
+    height: 25vh;
+
+}
+.contain2{
+	position: absolute;
+	bottom: 0;
+	left: -10vw;
+	width: 60vw;
+	/*height: 60vh;*/
+	z-index: 140;
+}
+
+.slider > img{
+	/*width: 100%;*/
+	height: 45vh;
+	margin: auto;
+  bottom: 0;
+  left: 0vw;
+}
+
+@media screen and ( max-width:800px){
+	.contain1{
+		top: 20vh;
+		height: 25vh;
+	}
+	.slider-nav .draggable{
+  	height: 25vh;
+  }
+
+  .slider-nav .slick-slide,
+  .slider-nav .slick-slide img{
+		display: inline-block;
+		width: 25vw;
+		height: auto;
+		padding: 0 5vw;
+	}
+
+  .slider-nav .slick-current,
+  .slider-nav .slick-current img{
+      margin-top: 20px;
+	    transform: scale(1.80);
+	}/*中央の画像の大きさ*/
+
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>芸工祭 2017</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!--  -->
+  <link rel="stylesheet" type="text/css" href="css/jquery.multiscroll.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easings.min.js"></script>
+  <script type="text/javascript" src="js/jquery.multiscroll.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/slider_style.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" media="screen" />
+</head>
+
+</head>
+
+<body>
+  <div id='loading'></div>
+  <div id='loading-contents'>
+    <img class='load' src='img/loading.gif'/>
+  </div>
+  <div id="main">
+    <div class="ms-left">
+
+      <!-- main -->
+      <div class="ms-section l-relative">
+        <img class='logo-img y-center' src='img/logo-img.png' alt="">
+      </div>
+
+      <!-- about -->
+      <div class="ms-section">
+        <h2 class='h2-img'><img src='img/title-about.png'></h2>
+        <div class='article-container'>
+          <div class='article-about'>
+            <img src='img/about-img01.png' />
+            <p>
+              個性豊か芸工生の個人作品やグループ作品、<br/>
+              笑いに溢れるステージ企画、おいしいカフェや<br/>
+              模擬店など、数多くの見所満載のお祭り。<br/>
+              ゆっくり作品を見て回るのもよし、<br/>
+              目一杯はしゃぎ尽くすのもよし、<br/>
+              芸工生もそうじゃない人も自由に楽しめる<br/>
+              学祭です。
+            </p>
+          </div>
+          <div class='article-about'>
+            <img src='img/about-img02.png' />
+            <p>
+              爆発 × 熱量<br/>
+              芸工生一人一人がこの芸工祭を<br/>
+              通して、それぞれの個性を爆発させたい<br/>
+              という想いをこめて、爆弾の“bomb”と<br/>
+              エネルギーの“joule”から名前をつけました<br/>
+
+              個性を爆発させて新しい自分に出会う<br/>
+              という点で、挨拶で用いられるボンジュール<br/>
+              ということ言葉を選びました<br/>
+            </p>
+          </div>
+          <div class='article-about'>
+            <img src='img/about-img03.png' />
+            <p>
+              2017.10.28(土) 10:00〜17:00<br>
+              2017.10.29(日) 10:00〜16:30
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- movie -->
+      <div class="ms-section bg-orange">
+        <h2 class='h2-img'><img src='img/title-movie.png'></h2>
+        <div class='play-tape tape-top'></div>
+          <div class='movie-container'>
+            <iframe  src="https://www.youtube.com/embed/T8UcWyatYIw" frameborder="0" allowfullscreen></iframe>
+          </div>
+        <div class='play-tape tape-bottom'></div>
+      </div>
+
+      <!-- job -->
+      <div class="ms-section bg-lightgray l-relative">
+        <h2 class='h2-img'><img src='img/title-job.png'></h2>
+
+        <div class="contain1">
+         <div class="slider-nav popcorn-nav">
+
+        </div>
+      </div>
+      <div class="contain2">
+        <div class="slider popcorn-slider">
+
+        </div>
+      </div>
+    </div>
+
+      <!-- last -->
+      <div class="ms-section">
+        <div class='img-container'>
+          <img src='img/logo-last.png'/>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="ms-right">
+      <!-- main -->
+      <div class="ms-section noize-right">
+        <img class='down-btn' src='img/scroll-down.png'>
+      </div>
+
+      <!-- about -->
+      <div class="ms-section bg-orange noize-right" >
+      </div>
+
+      <!-- movie -->
+      <div class="ms-section bg-black noize-right l-relative-child" >
+      </div>
+
+      <!-- job -->
+      <div class="ms-section bg-job l-relative">
+        <div class='bg-clear'>
+          <div class='text-container'>
+            <div>
+              <p class='change-text text-white'>芸工祭を統括する、芸工祭のトップです</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- last -->
+      <div class="ms-section noize-right">
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#main').multiscroll({
+        anchors: ['top', 'about', 'movie', 'job', 'last'],
+        menu: '#menu',
+        navigation: true,
+        navigationTooltips: false,
+        loopBottom: false,
+        loopTop: false
+      });
+    });
+
+    $(document).ready(function(){
+      $('.slider').slick({
+        centerMode: true,
+        // centerPadding: "0vw",
+        infinite: true,
+        fade:true,//フェードするかどうか
+        arrows: false,
+        swipe:true,//スワイプ
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor:'.slider-nav', //サムネイルと連携
+        });
+      $('.slider-nav').slick({
+        centerMode: true,
+        // centerPadding: "20vw",
+        infinite: true,
+        dots:false,
+        swipe:true,//スワイプ
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor:'.slider',
+        focusOnSelect: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '10px',
+            slidesToShow: 3
+            }
+          }
+        ]
+      });
+    });
+
+    </script>
+</body>
+</html>

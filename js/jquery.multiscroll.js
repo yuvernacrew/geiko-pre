@@ -13,7 +13,7 @@
 		// Create some defaults, extending them with any options that were provided
 		options = $.extend({
 			'verticalCentered' : true,
-			'scrollingSpeed': 700,
+			'scrollingSpeed': 500,
 			'easing': 'easeInQuart',
 			'menu': false,
 			'sectionsColor': [],
