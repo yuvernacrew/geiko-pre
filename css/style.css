@@ -1,5 +1,3 @@
-/*loading*/
-
 #loading {
   display: block;
   position: fixed;
@@ -10,27 +8,153 @@
   background: #000;
   z-index: 1000;
 }
-#loading-contents {
-  display: block;
-  position: fixed;
-  left: -43.4%;
-  top: 11.4%;
-  width: 184%;
-  text-align: center;
-  color: #fff;
-  z-index: 1001;
-}
 
-#loading-contents img {
-  width: 100%;
-}
+/*--------------
+  last
+---------------*/
 
-.logo-img {
+.img-container {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
+  height: 100vh;
+  background-image: url('../img/mv-black.png');
+  background-position: center;
+  background-size: cover;
 }
 
+@media(min-width: 540px){
+  #loading-contents {
+    display: block;
+    position: fixed;
+    left: -43%;
+    top: 5%;
+    width: 184%;
+    text-align: center;
+    color: #fff;
+    z-index: 1001;
+  }
 
+  #loading-contents img {
+    width: 40%;
+  }
+
+  .logo-img {
+    position: absolute;
+    width: 50vw;
+    left: 25vw;
+    top: 50vh;
+  }
+
+  .down-btn {
+    width: 10vh;
+    left: -5vh;
+    bottom: 3%;
+    position: absolute;
+  }
+
+
+  .h2-img img{
+    width: 30%;
+    margin: 5vh 0 0 5vw;
+  }
+
+  /*--------------
+    about
+  ---------------*/
+  .article-container {
+    position: absolute;
+    width: 90vw;
+    left: 5vw;
+    height: 75vw;
+    z-index: 100;
+  }
+
+  .article-about img{
+    position: static;
+    height: 6.5vh;
+  }
+
+  .article-about p {
+    padding: 0;
+    font-size: 20px;
+    margin: 0 5px 25px 10px;
+  }
+
+  /*--------------
+    movie
+  ---------------*/
+  .play-tape {
+    position: absolute;
+    width: 56vw;
+    left: 23vw;
+    background-color: black;
+    background-image: url('../img/movie-tape.png');
+    background-size: contain;
+    height: 5vh;
+    z-index: 100;
+  }
+
+  .movie-container {
+    position: absolute;
+    background-color: black;
+    top: 23vh;
+    left: 23vw;
+    width: 56vw;
+    height: 58vh;
+    margin-top: 20px;
+    z-index: 100;
+  }
+
+  .movie-container iframe {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .tape-top {
+    top: 22vh;
+    z-index: 400;
+  }
+
+  .tape-bottom {
+    z-index: 400;
+    top: 82.7vh;
+    background-position: center;
+  }
+
+  /*--------------
+    job
+  ---------------*/
+  .popcorn-container {
+    width: 55vw;
+    margin: auto;
+    position: absolute;
+    z-index: 100;
+    left: 22.5vw;
+    top: 18vh;
+  }
+
+  .popcorn-container img{
+    width: 11vw;
+    height: 11vw;
+    margin: -0.5vw 0;
+  }
+
+  .modal-img {
+    width: 30%;
+  }
+
+  /*--------------
+    last
+  ---------------*/
+  .img-container img{
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 40vh;
+  }
+}
 @media(max-width: 540px){
   .h2-img img{
     width: 60%;
@@ -40,6 +164,35 @@
   /*--------------
     loading
   ---------------*/
+  #loading {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #000;
+    z-index: 1000;
+  }
+  #loading-contents {
+    display: block;
+    position: fixed;
+    left: -43.4%;
+    top: 11.4%;
+    width: 184%;
+    text-align: center;
+    color: #fff;
+    z-index: 1001;
+  }
+
+  #loading-contents img {
+    width: 100%;
+  }
+
+  .logo-img {
+    position: absolute;
+    width: 100vw;
+  }
 
   .down-btn {
     width: 20vw;
@@ -109,23 +262,6 @@
     background-position: center;
   }
 
-  .img-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../img/mv-black.png');
-    background-position: center;
-    background-size: cover;
-  }
-
-  .img-container img{
-    width: 70vw;
-    margin-left: 15vw;
-    margin-top: 46vh;
-  }
-
   /*--------------
     job
   ---------------*/
@@ -154,5 +290,14 @@
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+  }
+
+  /*--------------
+    last
+  ---------------*/
+  .img-container img{
+    width: 70vw;
+    margin-left: 15vw;
+    margin-top: 46vh;
   }
 }

@@ -25,8 +25,12 @@
 .slider-nav .slick-current img{/*中央の画像について*/
     /*transform: scale(1.50);*/
     height: 25vh;
-
 }
+.slider-nav .slick-current img:focus{/*中央の画像について*/
+    /*transform: scale(1.50);*/
+    height: 25vh;
+}
+
 .contain2{
 	position: absolute;
 	bottom: 0;
@@ -43,6 +47,7 @@
   bottom: 0;
   left: 0vw;
 }
+
 
 @media screen and ( max-width:800px){
 	.contain1{

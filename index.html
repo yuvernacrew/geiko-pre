@@ -14,10 +14,14 @@
   <script type="text/javascript" src="js/jquery.multiscroll.js"></script>
   <script type='text/javascript' src="js/script.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/remodal.js"></script>
+
 
   <link rel="stylesheet" type="text/css" href="css/slider_style.css">
   <link rel="stylesheet" type="text/css" href="css/slick.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css" media="screen" />
+  <link rel="stylesheet" href="css/remodal.css">
+  <link rel="stylesheet" href="css/remodal-default-theme.css">
 </head>
 
 </head>
@@ -42,12 +46,12 @@
           <div class='article-about'>
             <img src='img/about-img01.png' />
             <p>
-              個性豊か芸工生の個人作品やグループ作品、<br/>
-              笑いに溢れるステージ企画、おいしいカフェや<br/>
-              模擬店など、数多くの見所満載のお祭り。<br/>
-              ゆっくり作品を見て回るのもよし、<br/>
-              目一杯はしゃぎ尽くすのもよし、<br/>
-              芸工生もそうじゃない人も自由に楽しめる<br/>
+              個性豊か芸工生の個人作品やグループ作品、<br class='is-sp'/>
+              笑いに溢れるステージ企画、おいしいカフェや<br class='is-sp'/>
+              模擬店など、数多くの見所満載のお祭り。<br class='is-sp'/>
+              ゆっくり作品を見て回るのもよし、<br class='is-sp'/>
+              目一杯はしゃぎ尽くすのもよし、<br class='is-sp'/>
+              芸工生もそうじゃない人も自由に楽しめる<br class='is-sp'/>
               学祭です。
             </p>
           </div>
@@ -55,14 +59,14 @@
             <img src='img/about-img02.png' />
             <p>
               爆発 × 熱量<br/>
-              芸工生一人一人がこの芸工祭を<br/>
-              通して、それぞれの個性を爆発させたい<br/>
-              という想いをこめて、爆弾の“bomb”と<br/>
-              エネルギーの“joule”から名前をつけました<br/>
+              芸工生一人一人がこの芸工祭を<br class='is-sp'/>
+              通して、それぞれの個性を爆発させたい<br class='is-sp'/>
+              という想いをこめて、爆弾の“bomb”と<br class='is-sp'/>
+              エネルギーの“joule”から名前をつけました。<br/>
 
-              個性を爆発させて新しい自分に出会う<br/>
-              という点で、挨拶で用いられるボンジュール<br/>
-              ということ言葉を選びました<br/>
+              個性を爆発させて新しい自分に出会う<br class='is-sp'/>
+              という点で、挨拶で用いられるボンジュール<br class='is-sp'/>
+              ということ言葉を選びました
             </p>
           </div>
           <div class='article-about'>
@@ -89,17 +93,32 @@
       <div class="ms-section bg-lightgray l-relative">
         <h2 class='h2-img'><img src='img/title-job.png'></h2>
 
-        <div class="contain1">
-         <div class="slider-nav popcorn-nav">
+        <!-- ▼ sp -->
+        <!-- pop-corn -->
+        <div class="is-sp contain1">
+           <div class="slider-nav popcorn-nav"></div>
+        </div>
+        <!-- 写真 -->
+        <div class="is-sp contain2">
+          <div class="slider popcorn-slider"></div>
+        </div>
+        <!-- ▲ sp -->
+        <!-- ▼ pc -->
+          <div class='is-pc popcorn-container'>
+
+          </div>
+
+        <!-- ▼ これがjQueryで操作 -->
+
+        <div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+
+          <!-- ここにテキスト -->
 
         </div>
-      </div>
-      <div class="contain2">
-        <div class="slider popcorn-slider">
 
-        </div>
+        <!-- ▲ pc -->
       </div>
-    </div>
 
       <!-- last -->
       <div class="ms-section">
@@ -127,7 +146,7 @@
       <!-- job -->
       <div class="ms-section bg-job l-relative">
         <div class='bg-clear'>
-          <div class='text-container'>
+          <div class='is-sp text-container'>
             <div>
               <p class='change-text text-white'>芸工祭を統括する、芸工祭のトップです</p>
             </div>
@@ -163,6 +182,7 @@
         swipe:true,//スワイプ
         slidesToShow: 1,
         slidesToScroll: 1,
+        scrollBar:false,
         asNavFor:'.slider-nav', //サムネイルと連携
         });
       $('.slider-nav').slick({
@@ -173,6 +193,7 @@
         swipe:true,//スワイプ
         slidesToShow: 1,
         slidesToScroll: 1,
+        scrollBar:false,
         asNavFor:'.slider',
         focusOnSelect: true,
         responsive: [

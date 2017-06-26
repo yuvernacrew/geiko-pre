@@ -99,8 +99,44 @@ $(function(){
     var name = part[i].partname;
     $('.popcorn-nav').append(`<img class='popcorn-btn' id='${i}' src='img/pop/pop-${name}.png' />`);
 
-    $('.popcorn-slider').append(`<img class='part-photo' id='${i}' src='img/photo/photo-${name}.png' />`)
+    $('.popcorn-slider').append(`<img class='part-photo' id='${i}' src='img/photo/photo-${name}.png' />`);
+
+    $('.popcorn-container').append(`<a href='#modal'><img class='pc-popcorn-btn' id='${i}' src='img/pop/pop-${name}.png'/></a>`);
   }
+
+  //pc popcorn-btn hover
+
+   $('.pc-popcorn-btn').hover(function(){
+      var name = part[$(this).attr('id')].partname;
+      $(this).attr('src','img/photopop/popcorn-' + name + '.png');
+      $('.bg-job').css('background-image','url("./img/icon/icon-' + name + '.png")')
+    }, function(){
+      var name = part[$(this).attr('id')].partname;
+      $(this).attr('src', 'img/pop/pop-' + name + '.png');
+      $('.bg-job').css('background-image','url("./img/icon/icon-' + name + '.png")')
+   });
+
+   $('.pc-popcorn-btn').click(function(){
+     var name = part[$(this).attr('id')].partname;
+     var text = part[$(this).attr('id')].text;
+
+     $('.remodal').append(
+       `<h3 class='modal-heading'>〜${name}〜</h3>
+       <p class='modal-text'>${text}</p>
+       <img class='modal-img' src='img/photo/photo-${name}.png'/>`
+     )
+   });
+
+   $('.remodal-close , .remodal-wrapper').click(function(){
+     $('.remodal').children("h3 , img , p").remove();
+   });
+
+
+
+
+// if($('.popcorn-btn').hasClass('slick-center')){
+//
+// }
 
   $('.popcorn-btn').click(function(){
     var name = part[$(this).attr('id')].partname;
@@ -129,7 +165,6 @@ $(function(){
 
     $('#loading-contents').delay(2800).fadeOut(500);
     $('#loading').delay(3500).fadeOut(500);
-
 
     setTimeout(function() {
       $('.logo-img').attr('src', src);
